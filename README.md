@@ -95,9 +95,6 @@ When the sequencer is stopped or no clock messages have arrived in the last 2 se
 
 ## Installation
 
-### Via Module Store
-
-Once NoteTwist is listed in the Schwung module catalog, install it directly from the Module Store on your Move.
 
 ### Manual Install
 
