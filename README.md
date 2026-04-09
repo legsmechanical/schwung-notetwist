@@ -93,18 +93,6 @@ NoteTwist automatically locks to the Move's internal MIDI clock when the sequenc
 
 When the sequencer is stopped or no clock messages have arrived in the last 2 seconds, the module falls back to the host's tempo query, then to the user-settable `bpm` parameter.
 
-## Installation
-
-
-### Manual Install
-
-```bash
-git clone https://github.com/charlesvestal/schwung.git
-cd schwung
-./scripts/build.sh
-./scripts/install.sh local --skip-confirmation
-```
-
 ## Navigation
 
 NoteTwist's Shadow UI has three menu levels:
