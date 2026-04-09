@@ -1,0 +1,60 @@
+{
+  "id": "notetwist",
+  "name": "NoteTwist",
+  "abbrev": "NTW",
+  "version": "0.1.0",
+  "builtin": true,
+  "ui": "ui.js",
+  "dsp": "dsp.so",
+  "api_version": 2,
+  "capabilities": {
+    "chainable": true,
+    "component_type": "midi_fx",
+    "ui_hierarchy": {
+      "levels": {
+        "root": {
+          "name": "NoteTwist",
+          "params": [
+            {"key": "octave_shift", "name": "Octave", "type": "int", "min": -4, "max": 4, "default": 0, "step": 1},
+            {"key": "note_offset", "name": "Note Ofs", "type": "int", "min": -24, "max": 24, "default": 0, "step": 1},
+            {"key": "velocity_offset", "name": "Vel Ofs", "type": "int", "min": -127, "max": 127, "default": 0, "step": 1},
+            {"key": "gate_time", "name": "Gate %", "type": "int", "min": 0, "max": 200, "default": 100, "step": 1},
+            {"key": "delay_time", "name": "Dly Time", "type": "enum", "options": ["0", "1/64", "1/32", "1/16T", "1/16", "1/8T", "1/8", "1/4T", "1/4", "1/2", "1/1"], "default": 8},
+            {"key": "repeat_times", "name": "Repeats", "type": "int", "min": 0, "max": 64, "default": 3, "step": 1},
+            {"key": "clock_shift", "name": "Clk Shift", "type": "enum", "options": ["0", "1/64", "1/32", "1/16T", "1/16", "1/8T", "1/8", "1/4T", "1/4", "1/2", "1/1"], "default": 0},
+            {"key": "delay_level", "name": "Dly Level", "type": "int", "min": 0, "max": 127, "default": 80, "step": 1},
+            {"level": "harmonize", "label": "Harmonize \u2192"},
+            {"level": "delay_detail", "label": "Delay Detail \u2192"}
+          ],
+          "knobs": ["octave_shift", "note_offset", "velocity_offset", "gate_time", "delay_time", "repeat_times", "clock_shift", "delay_level"]
+        },
+        "harmonize": {
+          "name": "Harmonize",
+          "params": [
+            {"key": "unison", "name": "Unison", "type": "enum", "options": ["OFF", "x2", "x3"], "default": 0},
+            {"key": "octaver", "name": "Octaver", "type": "int", "min": -4, "max": 4, "default": 0, "step": 1},
+            {"key": "harmonize_1", "name": "Harmony 1", "type": "int", "min": -24, "max": 24, "default": 0, "step": 1},
+            {"key": "harmonize_2", "name": "Harmony 2", "type": "int", "min": -24, "max": 24, "default": 0, "step": 1},
+            {"level": "root", "label": "createBack"}
+          ],
+          "knobs": ["unison", "octaver", "harmonize_1", "harmonize_2"]
+        },
+        "delay_detail": {
+          "name": "Delay Detail",
+          "params": [
+            {"key": "delay_time", "name": "Dly Time", "type": "enum", "options": ["0", "1/64", "1/32", "1/16T", "1/16", "1/8T", "1/8", "1/4T", "1/4", "1/2", "1/1"], "default": 8},
+            {"key": "delay_level", "name": "Dly Level", "type": "int", "min": 0, "max": 127, "default": 80, "step": 1},
+            {"key": "repeat_times", "name": "Repeats", "type": "int", "min": 0, "max": 64, "default": 3, "step": 1},
+            {"key": "fb_velocity", "name": "FB Vel", "type": "int", "min": -127, "max": 127, "default": -10, "step": 1},
+            {"key": "fb_note", "name": "FB Note", "type": "int", "min": -24, "max": 24, "default": 0, "step": 1},
+            {"key": "fb_note_random", "name": "FB Rand", "type": "enum", "options": ["off", "on"], "default": 0},
+            {"key": "fb_gate_time", "name": "FB Gate", "type": "int", "min": -100, "max": 100, "default": 0, "step": 1},
+            {"key": "fb_clock", "name": "FB Clock", "type": "int", "min": -100, "max": 100, "default": 0, "step": 1},
+            {"level": "root", "label": "createBack"}
+          ],
+          "knobs": ["delay_time", "delay_level", "repeat_times", "fb_velocity", "fb_note", "fb_note_random", "fb_gate_time", "fb_clock"]
+        }
+      }
+    }
+  }
+}

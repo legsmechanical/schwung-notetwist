@@ -1,0 +1,164 @@
+{
+  "title": "NoteTwist",
+  "children": [
+    {
+      "title": "Overview",
+      "lines": [
+        "MIDI FX with octave",
+        "transpose, harmonize,",
+        "note processing,",
+        "clock shift, and",
+        "tempo-synced MIDI",
+        "delay with feedback.",
+        "",
+        "Inspired by Yamaha",
+        "RS7000 Play Effects",
+        "and MIDI Delay.",
+        "",
+        "Add it as a MIDI FX",
+        "in Signal Chain."
+      ]
+    },
+    {
+      "title": "Signal Chain",
+      "lines": [
+        "Notes pass through",
+        "five stages:",
+        "",
+        "1. Octave Transpose",
+        "2. Harmonize",
+        "3. Note Page",
+        "4. Clock Shift",
+        "5. MIDI Delay",
+        "",
+        "Each stage processes",
+        "the output of the",
+        "previous one."
+      ]
+    },
+    {
+      "title": "Basic Controls",
+      "lines": [
+        "Root menu knobs:",
+        "",
+        "1: Octave (-4 to +4)",
+        "2: Note Ofs (-24..24)",
+        "3: Vel Ofs",
+        "4: Gate % (0-200)",
+        "5: Delay Time",
+        "6: Repeats (0-64)",
+        "7: Clock Shift",
+        "8: Delay Level",
+        "",
+        "Two sub-menus:",
+        " Harmonize and",
+        " Delay Detail"
+      ]
+    },
+    {
+      "title": "Harmonize",
+      "lines": [
+        "Adds notes alongside",
+        "the original.",
+        "",
+        "Unison: OFF/x2/x3",
+        " Staggered copies",
+        " for thickening.",
+        "",
+        "Octaver: -4 to +4",
+        " One note N octaves",
+        " away. 0 = off.",
+        "",
+        "Harmony 1: -24..+24",
+        "Harmony 2: -24..+24",
+        " Add intervals in",
+        " semitones. 0 = off.",
+        "",
+        "Use both harmonies",
+        "for instant chords:",
+        " +4,+7 = major",
+        " +3,+7 = minor"
+      ]
+    },
+    {
+      "title": "Delay Detail",
+      "lines": [
+        "Delay Time: musical",
+        " value (1/64 to 1/1)",
+        "Delay Level: 0-127",
+        " First repeat volume",
+        "Repeats: 0-64",
+        " 0 = delay off",
+        "",
+        "Feedback controls:",
+        "",
+        "FB Vel: -127..+127",
+        " Volume per repeat",
+        " (negative = fadeout)",
+        "",
+        "FB Note: -24..+24",
+        " Pitch per repeat",
+        " (cumulative)",
+        "",
+        "FB Rand: off/on",
+        " Random pitch shift",
+        " per repeat (-12..12)",
+        "",
+        "FB Gate: -100..+100",
+        " Gate multiplier",
+        " per repeat",
+        "",
+        "FB Clock: -100..+100",
+        " Delay time change",
+        " per repeat"
+      ]
+    },
+    {
+      "title": "Tempo Sync",
+      "lines": [
+        "Locks to Move's MIDI",
+        "clock automatically",
+        "when the sequencer",
+        "is running.",
+        "",
+        "Uses a rolling window",
+        "of 24 clock ticks to",
+        "derive live BPM.",
+        "",
+        "Falls back to BPM",
+        "parameter when clock",
+        "stops for 2 seconds.",
+        "",
+        "BPM param is in the",
+        "Clock Shift sub-menu",
+        "(range 20-300)."
+      ]
+    },
+    {
+      "title": "Tips",
+      "lines": [
+        "Rising echoes:",
+        " Set FB Note to +5",
+        " with 4-6 repeats.",
+        "",
+        "Instant triads:",
+        " Harmony 1 = +4",
+        " Harmony 2 = +7",
+        " (major chord)",
+        "",
+        "Dub delay:",
+        " 1/4 time, 8 reps,",
+        " FB Vel -5,",
+        " FB Clock +10",
+        "",
+        "Random scatter:",
+        " FB Rand on, 6 reps,",
+        " FB Vel -15",
+        "",
+        "Stutter:",
+        " Clock Shift 1/16,",
+        " Gate 30-50%"
+      ]
+    }
+  ]
+}

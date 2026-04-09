@@ -1,0 +1,6 @@
+{
+  "version": "0.1.0",
+  "download_url": "https://github.com/legsmechanical/schwung-notetwist/releases/download/v0.1.0/notetwist-module.tar.gz",
+  "name": "NoteTwist",
+  "description": "MIDI FX with octave transpose, harmonize, note processing, clock shift, and tempo-synced MIDI delay with feedback"
+}

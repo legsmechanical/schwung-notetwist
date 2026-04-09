@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build module
+        run: |
+          docker build -t notetwist-builder -f scripts/Dockerfile .
+          docker run --rm -v "$PWD:/build" -w /build notetwist-builder ./scripts/build.sh
+
+      - name: Update release.json
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          REPO="${GITHUB_REPOSITORY}"
+          cat > release.json << EOF
+          {
+            "version": "${VERSION}",
+            "download_url": "https://github.com/${REPO}/releases/download/${GITHUB_REF_NAME}/notetwist-module.tar.gz",
+            "name": "NoteTwist",
+            "description": "MIDI FX with octave transpose, harmonize, note processing, clock shift, and tempo-synced MIDI delay with feedback"
+          }
+          EOF
+
+      - name: Commit release.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout main
+          git add release.json
+          git diff --cached --quiet || git commit -m "chore: update release.json for ${GITHUB_REF_NAME}"
+          git push origin main
+
+      - name: Upload release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/notetwist-module.tar.gz
+          generate_release_notes: true
