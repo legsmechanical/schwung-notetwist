@@ -3,6 +3,7 @@
   "name": "NoteTwist",
   "abbrev": "NTW",
   "version": "0.1.0",
+  "author": "legsmechanical",
   "builtin": true,
   "ui": "ui.js",
   "dsp": "dsp.so",

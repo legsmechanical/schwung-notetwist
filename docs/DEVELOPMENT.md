@@ -134,9 +134,9 @@ In JavaScript, use `console.log()` which auto-routes to the debug log. In C, use
 
 ## Contributing
 
-1. Fork the [schwung](https://github.com/charlesvestal/schwung) repository
-2. Create a feature branch: `git checkout -b notetwist/my-feature`
-3. Make your changes in `src/modules/midi_fx/notetwist/`
+1. Fork the [schwung-notetwist](https://github.com/legsmechanical/schwung-notetwist) repository
+2. Create a feature branch: `git checkout -b my-feature`
+3. Make your changes in `src/`
 4. Build and test on hardware: `./scripts/build.sh && ./scripts/install.sh local --skip-modules --skip-confirmation`
 5. Enable debug logging and verify no runtime errors
 6. Open a pull request against `main`

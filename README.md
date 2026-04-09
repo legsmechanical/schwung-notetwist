@@ -127,7 +127,7 @@ Accessed from "Delay Detail" in the root menu. Contains all delay and feedback p
 
 ## Credits
 
-NoteTwist was built on the [Schwung](https://github.com/charlesvestal/schwung) framework by [@charlesvestal](https://github.com/charlesvestal), inspired by the Play Effects and MIDI Delay of the Yamaha RS7000 hardware sequencer.
+NoteTwist was created by [@legsmechanical](https://github.com/legsmechanical), built on the [Schwung](https://github.com/charlesvestal/schwung) framework by [@charlesvestal](https://github.com/charlesvestal). Inspired by the Play Effects and MIDI Delay of the Yamaha RS7000 hardware sequencer.
 
 ## License
 
