@@ -4,10 +4,8 @@
   "abbrev": "NTW",
   "version": "0.1.0",
   "author": "legsmechanical",
-  "builtin": true,
   "ui": "ui.js",
   "dsp": "dsp.so",
-  "api_version": 2,
   "capabilities": {
     "chainable": true,
     "component_type": "midi_fx",
